@@ -1,0 +1,59 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Kukudocs JS Document Viewer | KUKUDOCS</title>
+        <meta name="author" content="KUKUDOCS">
+        <meta name="description"
+              content="Kukudocs JS Document Viewer is a Javascript-based web document viewer that does not require a server.">
+        <meta name="keywords"
+              content="HTML5, javascript, Cloud, Viewer, Document, wysisyg, editor, HTML5 Viewer, Javascript Viewer, document viewer, web editor">
+
+        <link href="./css/jsViewer.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+
+        <div id="header" class="header">
+            <div class="container">
+                <a href="https://www.kukudocs.com">
+                    <div class="logo"><img src="./images/logo.png"></div>
+                </a>
+
+                <div class="contact"><span class="title">Kukudocs JS Document Viewer</span><span class="description">Kukudocs JS Document Viewer is a Javascript-based web document viewer that does not require a server.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="container main-container">
+            <div id="drag-drop-area">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="43" viewBox="0 0 50 43" class="box__icon">
+                    <path d="M48.4 26.5c-.9 0-1.7.7-1.7 1.7v11.6h-43.3v-11.6c0-.9-.7-1.7-1.7-1.7s-1.7.7-1.7 1.7v13.2c0 .9.7 1.7 1.7 1.7h46.7c.9 0 1.7-.7 1.7-1.7v-13.2c0-1-.7-1.7-1.7-1.7zm-24.5 6.1c.3.3.8.5 1.2.5.4 0 .9-.2 1.2-.5l10-11.6c.7-.7.7-1.7 0-2.4s-1.7-.7-2.4 0l-7.1 8.3v-25.3c0-.9-.7-1.7-1.7-1.7s-1.7.7-1.7 1.7v25.3l-7.1-8.3c-.7-.7-1.7-.7-2.4 0s-.7 1.7 0 2.4l10 11.6z"></path>
+                </svg>
+            </div>
+            <input id="files" type="file" name="files[]" multiple="false">
+            <button id="upload-btn">Select File</button>
+            <p><strong>* The file is not sent to the server and is processed on web browser.</strong></p>
+            <p><strong>* Be sure to try the demo on a browser. You can view .docx, .xlsx, .pptx, .pdf files.</strong></p>
+            <p><a href="https://www.kukudocs.com/product?tab=js-viewer">https://www.kukudocs.com</a></p>
+        </div>
+
+        <div id="modal">
+            <div id="modal-container"><a id="modal-close-btn"></a>
+                <div id="docxjs-wrapper" style="width:100%;height:100%;"></div>
+            </div>
+        </div>
+        <div id="parser-loading"></div>
+
+        <!-- Must have jquery library -->
+        <script type="text/javascript" src="./scripts/_lib/jquery.1.12.3.min.js"></script>
+
+        <script type="text/javascript" src="./scripts/docxjs/DocxJS.bundle.min.js"></script>
+        <script type="text/javascript" src="./scripts/celljs/CellJS.bundle.min.js"></script>
+        <script type="text/javascript" src="./scripts/slidejs/SlideJS.bundle.min.js"></script>
+        <script type="text/javascript" src="./scripts/pdfjs/PdfJS.bundle.min.js"></script>
+
+        <script type="text/javascript" src="./scripts/OriginalJSViewerLoader.js"></script>
+
+    </body>
+
+</html>
